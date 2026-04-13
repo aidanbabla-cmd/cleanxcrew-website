@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CleanXCrew — Montreal Exterior Cleaning</title>
+  <meta name="description" content="Montreal's premier exterior window and gutter cleaning. Free quotes." />
+  <meta name="theme-color" content="#060606" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="facebook-domain-verification" content="y1borj3ldih0d5f0h0dfhnkk73n1rn" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1626360055075822');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1626360055075822&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+  <div id="cursor-dot"   aria-hidden="true"></div>
+  <div id="cursor-ring"  aria-hidden="true"></div>
+  <div id="cursor-label" aria-hidden="true">VIEW</div>
+  <div id="scroll-bar"   aria-hidden="true"></div>
+
+  <!-- LOADER — Window Opening -->
+  <div id="loader" aria-hidden="true">
+    <!-- Branding overlay (sits above both panes) -->
+    <div class="win-brand">
+      <div class="win-logo">
+        <span class="wl-clean">CLEAN</span>
+        <svg class="wl-x" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <line x1="2" y1="2" x2="18" y2="18" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="18" y1="2" x2="2" y2="18" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <span class="wl-crew">CREW</span>
+      </div>
+      <p class="win-city">Montréal, QC</p>
+    </div>
+    <!-- Left pane -->
+    <div class="win-pane win-left">
+      <div class="win-bar win-bar-h" style="top:34%"></div>
+      <div class="win-bar win-bar-h" style="top:67%"></div>
+    </div>
+    <!-- Right pane -->
+    <div class="win-pane win-right">
+      <div class="win-bar win-bar-h" style="top:34%"></div>
+      <div class="win-bar win-bar-h" style="top:67%"></div>
+    </div>
+    <!-- Orange glowing seam where the two panes meet -->
+    <div class="win-seam"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="CleanXCrew home">
+        <span class="nl-clean">CLEAN</span>
+        <span class="nl-x"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="18" y2="18" stroke="#FF5500" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="2" x2="2" y2="18" stroke="#FF5500" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span class="nl-crew">CREW</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services" class="nl-link">Services</a></li>
+        <li><a href="#gallery"  class="nl-link">Gallery</a></li>
+        <li><a href="#about"    class="nl-link">About</a></li>
+        <li><a href="#quote" class="nav-cta" data-magnetic>Free Quote</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-glow" id="hero-glow" aria-hidden="true"></div>
+    <div class="hero-bg" id="hero-parallax">
+      <video autoplay muted loop playsinline webkit-playsinline class="hero-vid">
+        <source src="Public/IMG_8383.MOV" type="video/mp4"/>
+      </video>
+      <div class="hero-scrim"></div>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Floating photo stack -->
+    <div class="hero-photos" id="hero-photos" aria-hidden="true">
+      <div class="hp hp-back"  id="hp-back"><img src="Public/IMG_1135.JPG" alt=""/><div class="hp-shine"></div></div>
+      <div class="hp hp-front" id="hp-front"><img src="Public/IMG_1135.JPG" alt=""/><div class="hp-shine"></div></div>
+      <div class="hp-badge" id="hp-badge"><div class="hpb-stars">★★★★★</div><div class="hpb-text">5-Star Rated</div><div class="hpb-sub">Montréal, QC</div></div>
+      <div class="hp-pill" id="hp-pill"><div class="pill-dot"></div><span>Available Now</span></div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero-content" id="hero-content">
+      <p class="hero-tag" id="hero-tag"><span class="htag-line"></span>Montréal, QC — Est. 2022</p>
+      <h1 class="hero-hed" id="hero-hed" aria-label="We don't just clean... We transform!">
+        <span class="hword" id="hw1">WE DON'T</span>
+        <span class="hword" id="hw2">JUST CLEAN...</span>
+        <span class="hword hword-orange" id="hw3">WE TRANSFORM!</span>
+      </h1>
+      <p class="hero-sub" id="hero-sub">Exterior window cleaning and gutter cleaning — done by a crew that treats every home like their own.</p>
+      <div class="hero-actions" id="hero-actions">
+        <a href="#quote" class="btn-primary" data-magnetic><span>Get Free Quote</span><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#gallery" class="btn-ghost" data-magnetic><span class="bg-play">▶</span><span>See Our Work</span></a>
+      </div>
+    </div>
+
+    <div class="hero-strip" id="hero-strip">
+      <div class="hs-item"><span class="hs-n" data-odometer="500" data-suffix="+">0</span><span class="hs-l">Homes Cleaned</span></div>
+      <div class="hs-div"></div>
+      <div class="hs-item"><span class="hs-n" data-odometer="3" data-suffix=" yrs">0</span><span class="hs-l">In Business</span></div>
+      <div class="hs-div"></div>
+      <div class="hs-item"><span class="hs-n" data-odometer="100" data-suffix="%">0</span><span class="hs-l">Satisfaction</span></div>
+      <div class="hs-div"></div>
+      <div class="hs-item"><span class="hs-n">★★★★★</span><span class="hs-l">Google Rating</span></div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><div class="sc-track"><div class="sc-dot"></div></div></div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-track">
+      <span>Window Cleaning</span><span class="mq-sep">✦</span><span>Gutter Cleaning</span><span class="mq-sep">✦</span>
+      <span>Montréal, QC</span><span class="mq-sep">✦</span><span>Free Quotes</span><span class="mq-sep">✦</span>
+      <span>Streak-Free Guaranteed</span><span class="mq-sep">✦</span><span>5-Star Service</span><span class="mq-sep">✦</span>
+      <span>Window Cleaning</span><span class="mq-sep">✦</span><span>Gutter Cleaning</span><span class="mq-sep">✦</span>
+      <span>Montréal, QC</span><span class="mq-sep">✦</span><span>Free Quotes</span><span class="mq-sep">✦</span>
+      <span>Streak-Free Guaranteed</span><span class="mq-sep">✦</span><span>5-Star Service</span><span class="mq-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="services section-pad">
+    <div class="container">
+      <div class="section-label reveal">What We Do</div>
+      <div class="section-head-row">
+        <h2 class="section-title reveal">Our Services.<br/><em>Done Right.</em></h2>
+        <p class="section-desc reveal">Two specialties. One crew. Done better than anyone else in Montréal — every single time.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+
+      <!-- FEATURED: Package Deal -->
+      <div class="svc svc-featured" id="svc-0" data-tilt>
+        <div class="svc-num">✦</div>
+        <div class="svc-img-bg"><img src="Public/IMG_1135.JPG" alt="" class="svc-bg-img" aria-hidden="true"/><div class="svc-img-scrim svc-img-scrim-featured"></div></div>
+        <div class="svc-content">
+          <div class="svc-icon"><svg viewBox="0 0 52 52" fill="none"><rect x="3" y="3" width="46" height="46" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="3" y1="26" x2="49" y2="26" stroke="currentColor" stroke-width="1.5"/><line x1="26" y1="3" x2="26" y2="49" stroke="currentColor" stroke-width="1.5"/><path d="M9 19 Q15 14 21 19 Q27 24 33 19 Q39 14 45 19" stroke="#FF5500" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M3 16 H49 V21 Q40 21 34 28 Q28 34 20 32 Q12 30 3 25 Z" stroke="#FF5500" stroke-width="1.2" fill="none" opacity=".6"/></svg></div>
+          <div class="svc-tag svc-tag-featured">Best Value — Most Popular</div>
+          <h3>The Full<br/>Works</h3>
+          <p>Every window. Every gutter. Done in a single visit. The smart homeowner's choice — our most complete service, priced better than booking them separately.</p>
+          <div class="svc-includes-label">Everything included:</div>
+          <ul>
+            <li>Full gutter clear — every leaf, every clump</li>
+            <li>Complete downspout flush &amp; flow check</li>
+            <li>Window detail — interior &amp; exterior</li>
+            <li>Screen &amp; track deep clean</li>
+            <li>Before &amp; after photo documentation</li>
+            <li>Streak-free guarantee on all glass</li>
+          </ul>
+          <a href="#quote" class="svc-cta svc-cta-featured" data-magnetic><span>Book The Full Works</span><div class="svc-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+        </div>
+        <div class="svc-shine" aria-hidden="true"></div>
+      </div>
+
+      <!-- Window Cleaning -->
+      <div class="svc svc-alt" id="svc-1" data-tilt>
+        <div class="svc-num">01</div>
+        <div class="svc-img-bg"><img src="Public/IMG_1135.JPG" alt="" class="svc-bg-img" aria-hidden="true"/><div class="svc-img-scrim"></div></div>
+        <div class="svc-content">
+          <div class="svc-icon"><svg viewBox="0 0 52 52" fill="none"><rect x="3" y="3" width="46" height="46" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="3" y1="26" x2="49" y2="26" stroke="currentColor" stroke-width="1.5"/><line x1="26" y1="3" x2="26" y2="49" stroke="currentColor" stroke-width="1.5"/><path d="M9 19 Q15 14 21 19 Q27 24 33 19 Q39 14 45 19" stroke="#FF5500" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
+          <div class="svc-tag">Window Cleaning</div>
+          <h3>Window<br/>Cleaning</h3>
+          <p>Crystal clear. No streaks. No shortcuts. Your windows are the face of your home — every pane, every angle, done right.</p>
+          <ul><li>Interior &amp; exterior panes</li><li>Screens &amp; tracks included</li><li>Streak-free guarantee</li><li>All heights &amp; styles</li></ul>
+          <a href="#quote" class="svc-cta" data-magnetic><span>Get a Quote</span><div class="svc-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+        </div>
+        <div class="svc-shine" aria-hidden="true"></div>
+      </div>
+
+      <!-- Gutter Cleaning -->
+      <div class="svc" id="svc-2" data-tilt>
+        <div class="svc-num">02</div>
+        <div class="svc-img-bg"><img src="Public/IMG_1135.JPG" alt="" class="svc-bg-img" aria-hidden="true"/><div class="svc-img-scrim"></div></div>
+        <div class="svc-content">
+          <div class="svc-icon"><svg viewBox="0 0 52 52" fill="none"><path d="M3 16 H49 V24 Q37 24 31 34 Q25 42 15 38 Q8 35 3 28 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M13 24 L13 48" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="42" cy="11" r="5" stroke="#FF5500" stroke-width="1.5"/><path d="M42 6 L42 3 M42 16 L42 19 M37 11 L34 11 M47 11 L50 11" stroke="#FF5500" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="svc-tag svc-tag-alt">Gutter Cleaning</div>
+          <h3>Gutter<br/>Cleaning</h3>
+          <p>Clogged gutters cause thousands in water damage. We clear them completely — debris, downspouts, all of it.</p>
+          <ul><li>Full debris removal</li><li>Downspout flush &amp; check</li><li>Gutter inspection included</li><li>Before &amp; after photos</li></ul>
+          <a href="#quote" class="svc-cta" data-magnetic><span>Get a Quote</span><div class="svc-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+        </div>
+        <div class="svc-shine" aria-hidden="true"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery-section section-pad">
+    <div class="container">
+      <div class="section-label reveal">Photo &amp; Video Gallery</div>
+      <div class="gal-header">
+        <h2 class="section-title reveal">Luxury Homes.<br/><em>Spotless Results.</em></h2>
+        <div class="gal-hint reveal"><svg viewBox="0 0 44 16" fill="none"><path d="M2 8h40M2 8l6-6M2 8l6 6M42 8l-6-6M42 8l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Drag to explore</span></div>
+      </div>
+    </div>
+    <div class="gal-scroller" id="gal-scroller">
+      <div class="gal-track" id="gal-track">
+        <div class="gi gi-portrait" data-vid="Public/-7433529403317213912.MP4"><div class="gi-media"><img src="Public/IMG_1135.JPG" alt="CleanXCrew at luxury Montreal home"/></div><div class="gi-foot"><span>Luxury Home · Montréal</span><span class="gi-arr">↗</span></div></div>
+        <div class="gi gi-landscape" data-vid="Public/-4602265339729552504.MP4"><div class="gi-media"><video muted loop playsinline webkit-playsinline class="gi-vid"><source src="Public/-4602265339729552504.MP4" type="video/mp4"/></video></div><div class="gi-foot"><span>Gutter Debris Removal</span><span class="gi-arr">↗</span></div></div>
+        <div class="gi gi-portrait" data-vid="Public/2453692628337635780.MP4"><div class="gi-media"><img src="Public/IMG_1135.JPG" alt="Exterior glass cleaning"/></div><div class="gi-foot"><span>Exterior Glass Panels</span><span class="gi-arr">↗</span></div></div>
+        <div class="gi gi-landscape" data-vid="Public/2453692628337635780.MP4"><div class="gi-media"><video muted loop playsinline webkit-playsinline class="gi-vid"><source src="Public/2453692628337635780.MP4" type="video/mp4"/></video></div><div class="gi-foot"><span>Gutter Cleaning</span><span class="gi-arr">↗</span></div></div>
+        <div class="gi gi-portrait" data-src="Public/IMG_0688.JPG"><div class="gi-media"><img src="Public/IMG_0688.JPG" alt="The CleanXCrew team"/></div><div class="gi-foot"><span>The CleanXCrew</span><span class="gi-arr">↗</span></div></div>
+        <div class="gi gi-landscape" data-vid="Public/-5832488720514785414.MP4"><div class="gi-media"><video muted loop playsinline webkit-playsinline class="gi-vid"><source src="Public/-5832488720514785414.MP4" type="video/mp4"/></video></div><div class="gi-foot"><span>Gutter Flush</span><span class="gi-arr">↗</span></div></div>
+        <div class="gi gi-landscape" data-vid="Public/IMG_8383.MOV"><div class="gi-media"><video muted loop playsinline webkit-playsinline class="gi-vid"><source src="Public/IMG_8383.MOV" type="video/mp4"/></video></div><div class="gi-foot"><span>Detail Work</span><span class="gi-arr">↗</span></div></div>
+        <div class="gi gi-portrait" data-vid="Public/-3903901266103355953.MP4"><div class="gi-media"><video muted loop playsinline webkit-playsinline class="gi-vid"><source src="Public/-3903901266103355953.MP4" type="video/mp4"/></video></div><div class="gi-foot"><span>Exterior Detail</span><span class="gi-arr">↗</span></div></div>
+      </div>
+    </div>
+    <div class="gal-prog-wrap container"><div class="gal-prog-bar"><div class="gal-prog-fill" id="gal-prog-fill"></div></div></div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="proof-section">
+    <div class="proof-bg"><img src="Public/IMG_1135.JPG" alt="" class="proof-img" aria-hidden="true"/><div class="proof-scrim"></div></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="container proof-body">
+      <div class="proof-left">
+        <div class="section-label reveal" style="color:rgba(255,255,255,.45)">Why It Matters</div>
+        <h2 class="proof-title reveal">Your home is your<br/><span class="text-orange">biggest investment.</span><br/>Treat it that way.</h2>
+        <p class="proof-sub reveal">Dirty windows and clogged gutters don't just look bad — they actively damage your home. We fix that.</p>
+        <a href="#quote" class="btn-primary reveal" data-magnetic>Book a Clean →</a>
+      </div>
+      <div class="proof-stats reveal">
+        <div class="pstat"><span class="pstat-n" data-odometer="40" data-suffix="%">0</span><span class="pstat-l">more curb appeal after a clean</span></div>
+        <div class="pstat-div"></div>
+        <div class="pstat"><span class="pstat-n" data-prefix="$" data-odometer="3" data-suffix="k+">0</span><span class="pstat-l">saved in water damage</span></div>
+        <div class="pstat-div"></div>
+        <div class="pstat"><span class="pstat-n" data-odometer="1" data-suffix="hr">0</span><span class="pstat-l">avg service completion time</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about section-pad">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-copy">
+          <div class="section-label reveal">Our Story</div>
+          <h2 class="section-title reveal">Two Students.<br/><em>One Standard.</em></h2>
+          <p class="about-lead reveal">We started CleanXCrew at 15. Not as a side gig — as a real business we actually care about.</p>
+          <p class="about-body reveal">Three years later, we've cleaned hundreds of Montreal homes and our standards haven't dropped once. We show up on time, work hard, and won't leave until it's right.</p>
+          <p class="about-body reveal">We built this company because we take pride in what we leave behind. We want our clients to look at their home and feel proud of it — and call us back every single year.</p>
+          <div class="pillars reveal">
+            <div class="pillar"><div class="pillar-dot"></div><div><strong>Hardworking</strong><span>We don't cut corners. Ever.</span></div></div>
+            <div class="pillar"><div class="pillar-dot"></div><div><strong>Reliable</strong><span>On time, every time.</span></div></div>
+            <div class="pillar"><div class="pillar-dot"></div><div><strong>Pride in Work</strong><span>You'll notice the difference.</span></div></div>
+          </div>
+          <a href="#quote" class="btn-primary reveal" data-magnetic>Work With Us →</a>
+        </div>
+        <div class="about-photos" id="about-photos">
+          <div class="ap-main  reveal"><img src="Public/IMG_1135.JPG" alt="CleanXCrew cleaning luxury Montreal home"/></div>
+          <div class="ap-sec   reveal" style="--sd:.15s"><img src="Public/IMG_1135.JPG" alt="CleanXCrew exterior window cleaning"/></div>
+          <div class="ap-small reveal" style="--sd:.25s"><img src="Public/IMG_0688.JPG" alt="CleanXCrew team"/></div>
+          <div class="ap-tag"><span class="apt-n">3+</span><span class="apt-l">Years of Excellence</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews section-pad">
+    <div class="container">
+      <div class="section-label reveal">Client Reviews</div>
+      <h2 class="section-title reveal">What Montreal<br/><em>Homeowners Say.</em></h2>
+      <div class="reviews-grid">
+        <div class="review-card reveal" data-tilt style="--sd:.05s">
+          <div class="rc-quote">"</div>
+          <div class="rc-stars">★★★★★</div>
+          <p>"I've tried three different cleaning services. CleanXCrew is the only one I've called back. The windows are genuinely spotless."</p>
+          <div class="rc-author"><div class="rc-init">S</div><div><strong>Sarah L.</strong><span>Outremont, Montréal</span></div></div>
+        </div>
+        <div class="review-card reveal" data-tilt style="--sd:.1s">
+          <div class="rc-quote">"</div>
+          <div class="rc-stars">★★★★★</div>
+          <p>"Reliable, fast, and their work is immaculate. My gutters hadn't been touched in years — they handled it no problem and even sent photos after."</p>
+          <div class="rc-author"><div class="rc-init">M</div><div><strong>Marc D.</strong><span>Westmount, Montréal</span></div></div>
+        </div>
+        <div class="review-card reveal" data-tilt style="--sd:.15s">
+          <div class="rc-quote">"</div>
+          <div class="rc-stars">★★★★★</div>
+          <p>"Didn't expect much — I was honestly skeptical. I was completely wrong. These two work harder than anyone I've hired. Worth every penny."</p>
+          <div class="rc-author"><div class="rc-init">L</div><div><strong>Linda R.</strong><span>NDG, Montréal</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-band-bg"><video autoplay muted loop playsinline webkit-playsinline class="cta-vid"><source src="Public/2453692628337635780.MP4" type="video/mp4"/></video><div class="cta-scrim"></div><div class="grain" aria-hidden="true"></div></div>
+    <div class="container cta-body">
+      <p class="cta-eye reveal">Ready to transform your home?</p>
+      <h2 class="cta-hed reveal">Your home deserves<br/><span class="text-orange">better than this.</span></h2>
+      <a href="#quote" class="btn-primary reveal" data-magnetic>Get My Free Quote →</a>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section id="quote" class="quote-section section-pad">
+    <div class="container">
+      <div class="quote-head">
+        <div class="section-label reveal">Free Quote</div>
+        <h2 class="section-title reveal">Let's Talk.<br/><em>We'll Call You.</em></h2>
+        <p class="quote-sub reveal">Takes 30 seconds. We'll handle the rest.</p>
+      </div>
+      <div class="form-shell reveal">
+        <form id="qform" novalidate>
+          <div class="step-head"><h3>What do you need?</h3><p>Select all that apply.</p></div>
+          <div class="choices">
+            <label class="choice" for="c-win"><input type="checkbox" id="c-win" name="service" value="Window Cleaning"/><div class="cb-inner"><svg viewBox="0 0 40 40" fill="none"><rect x="2" y="2" width="36" height="36" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="1.5"/><line x1="20" y1="2" x2="20" y2="38" stroke="currentColor" stroke-width="1.5"/><path d="M6 13Q10 10 14 13Q18 16 22 13Q26 10 34 13" stroke="#FF5500" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><div><strong>Window Cleaning</strong><span>Interior &amp; exterior, streak-free</span></div></div><div class="cb-tick">✓</div></label>
+            <label class="choice" for="c-gut"><input type="checkbox" id="c-gut" name="service" value="Gutter Cleaning"/><div class="cb-inner"><svg viewBox="0 0 40 40" fill="none"><path d="M2 12 H38 V18 Q30 18 24 26 Q18 32 10 28 Q5 26 2 22 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 18 L10 36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M6 26 Q10 20 16 24" stroke="#FF5500" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><div><strong>Gutter Cleaning</strong><span>Full clear + downspout flush</span></div></div><div class="cb-tick">✓</div></label>
+            <label class="choice" for="c-both"><input type="checkbox" id="c-both" name="service" value="Both"/><div class="cb-inner cb-inner-best"><div class="cb-best-tag">Best Value</div><svg viewBox="0 0 40 40" fill="none"><path d="M20 3 L37 14 L37 37 L3 37 L3 14 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="20" cy="14" r="4" stroke="#FF5500" stroke-width="1.5"/></svg><div><strong>Both Services</strong><span>Bundle deal — best price</span></div></div><div class="cb-tick">✓</div></label>
+          </div>
+          <div class="fgrid">
+            <div class="fg full"><label for="f-fn">Name <span class="req">*</span></label><input type="text" id="f-fn" name="name" placeholder="Alex Martin" autocomplete="name" required/></div>
+            <div class="fg full"><label for="f-addr">Address <span class="req">*</span></label><input type="text" id="f-addr" name="address" placeholder="123 Rue Saint-Denis, Montréal" autocomplete="street-address" required/></div>
+            <div class="fg full"><label for="f-ph">Phone <span class="req">*</span></label><input type="tel" id="f-ph" name="phone" placeholder="(514) 000-0000" autocomplete="tel" required/></div>
+            <div class="fg full"><label for="f-em">Email <span class="opt">(optional)</span></label><input type="email" id="f-em" name="email" placeholder="alex@email.com" autocomplete="email"/></div>
+          </div>
+          <div class="fnav"><button type="submit" class="btn-submit" data-magnetic><span class="sub-txt">Get My Free Quote</span><span class="sub-arr"> →</span></button></div>
+        </form>
+        <div class="form-success" id="form-success">
+          <div class="success-ring"><svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="44" stroke="#FF5500" stroke-width="2" stroke-dasharray="276" stroke-dashoffset="276" class="sc-circle"/><path d="M28 50 L44 66 L72 34" stroke="#FF5500" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="60" stroke-dashoffset="60" class="sc-check"/></svg></div>
+          <h3>You're all set.</h3>
+          <p>We got your request. Expect a call soon.</p>
+          <span id="done-name" class="done-name"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" aria-label="CleanXCrew"><span class="nl-clean">CLEAN</span><span class="nl-x"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="18" y2="18" stroke="#FF5500" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="2" x2="2" y2="18" stroke="#FF5500" stroke-width="2" stroke-linecap="round"/></svg></span><span class="nl-crew">CREW</span></a>
+        <p>Montréal exterior cleaning. Started by two students who refuse to cut corners.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div><h4>Services</h4><ul><li><a href="#services">Window Cleaning</a></li><li><a href="#services">Gutter Cleaning</a></li><li><a href="#quote">Free Quote</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="#about">About Us</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#reviews">Reviews</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li><a href="mailto:hello@cleanxcrew.com">hello@cleanxcrew.com</a></li><li><span>Montréal, QC</span></li><li><span>Mon–Sat · 8am–7pm</span></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-btm container"><p>© 2026 CleanXCrew</p><div class="footer-legal"><a href="/privacy.html">Privacy Policy</a><span>·</span><a href="/terms.html">Terms of Service</a></div><p>Made in Montréal ✦</p></div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lb" class="lb" role="dialog" aria-modal="true" aria-label="Video viewer">
+    <div class="lb-bg" id="lb-bg"></div>
+    <div class="lb-inner"><button class="lb-close" id="lb-close" aria-label="Close">×</button><video controls class="lb-vid" id="lb-vid" playsinline></video></div>
+  </div>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

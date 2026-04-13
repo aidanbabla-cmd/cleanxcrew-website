@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3)",
+      "Bash(sed -i '' 's/background: var\\(--orange\\);$/background: rgba\\(255,85,0,.25\\);/' styles.css)",
+      "Bash(sed -i '' 's/box-shadow: 0 0 18px rgba\\(255,85,0,.6\\), 0 0 50px rgba\\(255,85,0,.18\\);/box-shadow: none; opacity: .35;/' styles.css)",
+      "Bash(sed -i '' 's/border-right: 2px solid var\\(--orange\\);/border-right: 1px solid rgba\\(255,85,0,.15\\);/' styles.css)",
+      "Bash(sed -i '' 's/border-left:  2px solid var\\(--orange\\);/border-left:  1px solid rgba\\(255,85,0,.15\\);/' styles.css)"
+    ]
+  }
+}
