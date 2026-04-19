@@ -1,0 +1,8 @@
+# robots.txt for cleanxcrew.com
+# Tells search engine crawlers they are welcome to index everything
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.cleanxcrew.com/sitemap.xml
