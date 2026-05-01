@@ -457,16 +457,14 @@
       const phone    = ($('#f-ph')   || {}).value || '';
       const email    = ($('#f-em')   || {}).value || '';
 
-      const FORMSPREE_ID = 'meevjbqr';
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbymTmp7plRCP3TsZvz60_tSjskv4OZ0meHgFj3_kNDxcI7GS2n_DuWJhWpU_ekNUPjQNg/exec';
 
       const payload = {
-        'Service(s) Requested': services,
-        'Name':    name,
-        'Address': address,
-        'Phone':   phone,
-        'Email':   email,
-        '_subject':  `New Quote Request from ${name} — CleanXCrew`,
-        '_replyto':  email,
+        service: services,
+        name:    name,
+        address: address,
+        phone:   phone,
+        email:   email,
       };
 
       const showSuccess = () => {
@@ -497,13 +495,14 @@
         }
       };
 
-      fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      fetch(SCRIPT_URL, {
         method:  'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        mode:    'no-cors',
+        headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify(payload),
       })
       .then(() => { if (window.fbq) fbq('track', 'Lead'); showSuccess(); })
-      .catch(() => { showSuccess(); console.warn('Formspree error'); });
+      .catch(() => { showSuccess(); console.warn('Google Sheets submission error'); });
     });
   }
 
