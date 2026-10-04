@@ -256,3 +256,7 @@ h1,h2,h3{letter-spacing:-.065em}
 @media(prefers-reduced-motion:reduce){.scene-stage>img{filter:brightness(1.16) contrast(1.05)}.scene-scrim{opacity:.54}}
 
 .scene-copy h2{text-shadow:0 3px 20px #000e}
+
+/* Keep offscreen galleries inexpensive while preserving their scroll space. */
+@supports(content-visibility:auto){.lookbook,.films,.services,.about{content-visibility:auto;contain-intrinsic-size:auto 800px}}
+@media(max-width:700px){.service-grid{grid-template-columns:1fr}.look-card{box-shadow:none}}

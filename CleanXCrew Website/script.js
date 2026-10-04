@@ -42,9 +42,9 @@
     if (introDone) return;
     const short = !full && seenIntro;
     introTimers.push(setTimeout(() => intro.classList.add('logo-visible'), short ? 100 : 680));
-    introTimers.push(setTimeout(() => intro.classList.add('aperture'), short ? 210 : 880));
-    introTimers.push(setTimeout(() => intro.classList.add('revealing'), short ? 440 : 1340));
-    introTimers.push(setTimeout(() => finishIntro(), short ? 730 : 1770));
+    introTimers.push(setTimeout(() => intro.classList.add('aperture'), short ? 120 : 680));
+    introTimers.push(setTimeout(() => intro.classList.add('revealing'), short ? 200 : 1040));
+    introTimers.push(setTimeout(() => finishIntro(), short ? 360 : 1400));
     introTimers.push(setTimeout(() => finishIntro(true), 2500));
     seenIntro = true;
   }
