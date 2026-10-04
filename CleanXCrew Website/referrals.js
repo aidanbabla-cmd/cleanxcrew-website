@@ -1,9 +1,9 @@
 'use strict';
-const outlineUrl = 'https://www.cleanxcrew.com/';
+const outlineUrl = 'https://www.outlinehomeservices.com/';
 const shareStatus = document.getElementById('shareStatus');
 async function copyOutline() {
   try { await navigator.clipboard.writeText(outlineUrl); shareStatus.textContent = 'Link copied. Remind your friend to mention your name and phone number.'; }
-  catch { shareStatus.textContent = 'Share this website: www.cleanxcrew.com — and ask your friend to mention you.'; }
+  catch { shareStatus.textContent = 'Share this website: www.outlinehomeservices.com — and ask your friend to mention you.'; }
 }
 document.getElementById('copyOutline').addEventListener('click', copyOutline);
 document.getElementById('shareOutline').addEventListener('click', async () => {

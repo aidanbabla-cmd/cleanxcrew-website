@@ -1,8 +1,8 @@
-# robots.txt for cleanxcrew.com
+# robots.txt for outlinehomeservices.com
 # Tells search engine crawlers they are welcome to index everything
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.cleanxcrew.com/sitemap.xml
+Sitemap: https://www.outlinehomeservices.com/sitemap.xml
