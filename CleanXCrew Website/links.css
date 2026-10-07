@@ -1,45 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
-:root{color-scheme:dark;--bg:#171616;--ink:#f7f5f2;--muted:#b9b5b3;--red:#c64649;--red-deep:#a9343c;--line:#ffffff24}
+:root{color-scheme:dark;--ink:#fffaf3;--muted:#f4dad8;--red:#ed263b;--red-dark:#ad1027;--green:#17673d;--gold:#ffd46b}
 *{box-sizing:border-box}
-html{min-height:100%;background:var(--bg);scroll-behavior:smooth}
-body.outline-links-page{min-height:100svh;margin:0;position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;padding:44px 22px 30px;color:var(--ink);font-family:'DM Sans',Arial,sans-serif;background:radial-gradient(ellipse at 50% 14%,#852d3230 0,transparent 38%),radial-gradient(ellipse at 50% 100%,#ffffff09 0,transparent 42%),var(--bg);overflow-x:hidden}
+html{min-height:100%;background:#21040b;scroll-behavior:smooth}
+body.outline-links-page{min-height:100svh;margin:0;position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;padding:76px 22px 30px;color:var(--ink);font-family:'DM Sans',Arial,sans-serif;background:#21040b;overflow-x:hidden}
 a{color:inherit;-webkit-tap-highlight-color:transparent}
-a:focus-visible{outline:3px solid #ed8581;outline-offset:4px}
-.links-glow{position:fixed;z-index:-1;top:-210px;left:50%;width:min(850px,100vw);height:560px;transform:translateX(-50%);pointer-events:none;background:radial-gradient(ellipse,#b5424720 0,transparent 68%);filter:blur(22px)}
-.links-main{width:min(100%,470px);margin:auto;display:flex;flex-direction:column;align-items:stretch;text-align:center;animation:page-in .55s cubic-bezier(.2,.7,.2,1) both}
-.brand{display:flex;flex-direction:column;align-items:center;margin:0 0 30px}
+a:focus-visible{outline:3px solid #ffe08d;outline-offset:4px}
+.holiday-scene{position:fixed;z-index:-2;inset:0;overflow:hidden;background:#1c0710}
+.holiday-scene:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,3,14,.08) 0%,rgba(53,3,17,.3) 46%,rgba(31,3,10,.64) 100%),url('assets/holiday/photo-003.webp') center 48%/cover no-repeat;transform:scale(1.025)}
+.holiday-scene:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 38%,transparent 0,rgba(57,0,13,.08) 60%,rgba(30,0,8,.32) 100%)}
+.holiday-photo{position:absolute;z-index:1;width:clamp(205px,23vw,330px);height:clamp(270px,39vh,390px);object-fit:cover;border:5px solid #ffe49b;border-radius:20px;box-shadow:0 18px 70px #1700089c,0 0 24px #ffcc6b42;opacity:.88}
+.holiday-photo-left{left:max(2.5vw,18px);top:20%;transform:rotate(-7deg)}
+.holiday-photo-right{right:max(2.5vw,18px);bottom:14%;transform:rotate(6deg)}
+.snowfall{position:absolute;z-index:2;inset:-20% 0;background-image:radial-gradient(circle,#fff 0 1.2px,transparent 1.7px),radial-gradient(circle,#ffe7b5 0 1px,transparent 1.6px),radial-gradient(circle,#fff 0 .8px,transparent 1.4px);background-size:137px 149px,193px 207px,83px 97px;background-position:0 0,53px 71px,31px 27px;opacity:.42;animation:snow-drift 24s linear infinite}
+.holiday-lights{position:fixed;z-index:3;top:0;left:0;width:100%;height:92px;overflow:visible;pointer-events:none}
+.light-wire{fill:none;stroke:#254b2b;stroke-width:6;stroke-linecap:round}
+.bulb{stroke:#fff3c3;stroke-width:2.5;animation:bulb-glow 2.4s ease-in-out infinite alternate}
+.bulb-red{fill:#ff263d}.bulb-gold{fill:#ffd84f;animation-delay:.4s}.bulb-green{fill:#21da78;animation-delay:.8s}.bulb-blue{fill:#33c9ff;animation-delay:1.2s}
+.links-main{position:relative;z-index:2;width:min(100%,470px);margin:auto;display:flex;flex-direction:column;align-items:stretch;text-align:center;padding:25px 25px 20px;border:2px solid #ffd56d;border-radius:27px;background:linear-gradient(155deg,rgba(239,35,56,.97),rgba(192,13,43,.97) 62%,rgba(151,10,35,.98));box-shadow:0 20px 80px #190008a6,0 0 50px #ff263d70;animation:page-in .55s cubic-bezier(.2,.7,.2,1) both}
+.brand{display:flex;flex-direction:column;align-items:center;margin:0 0 23px}
 .wordmark{display:inline-flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;font-family:Manrope,Arial,sans-serif;line-height:1}
-.wordmark span{font-size:21px;font-weight:800;letter-spacing:.15em}
-.wordmark small{font-size:8px;font-weight:700;letter-spacing:.36em;color:#c7c1be}
-.brand-name{margin:22px 0 0;font-family:Manrope,Arial,sans-serif;font-size:22px;font-weight:700;letter-spacing:-.035em}
-.brand-line{margin:7px 0 0;color:#e4dfdc;font-size:13px;letter-spacing:.01em}
-.brand-area{margin:5px 0 0;color:#a9a3a0;font-size:11px}
-.links-actions{display:flex;flex-direction:column;gap:12px;width:100%}
-.link-button{min-height:76px;position:relative;display:flex;align-items:center;gap:15px;padding:13px 17px;border:1px solid var(--line);border-radius:16px;text-decoration:none;text-align:left;background:linear-gradient(130deg,#292626,#211f1f);box-shadow:0 8px 24px #0003;transition:transform .2s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease}
-.link-button:hover{transform:translateY(-2px);border-color:#ffffff57;background:linear-gradient(130deg,#302b2b,#272323);box-shadow:0 12px 30px #0005}
-.link-quote{color:#fff;background:linear-gradient(120deg,#c94b4d,#b83b43);border-color:#e77c78;box-shadow:0 9px 27px #9c30353d}
-.link-quote:hover{background:linear-gradient(120deg,#d45758,#c0444a);border-color:#f29992;box-shadow:0 13px 32px #a4373d57}
-.button-icon{width:43px;height:43px;flex:none;display:grid;place-items:center;border:1px solid #ffffff28;border-radius:13px;background:#ffffff12;color:currentColor}
+.wordmark span{font-size:21px;font-weight:800;letter-spacing:.15em;text-shadow:0 2px 20px #ff8791a3}
+.wordmark small{font-size:8px;font-weight:700;letter-spacing:.36em;color:#ffe1c9}
+.brand-name{margin:16px 0 0;font-family:Manrope,Arial,sans-serif;font-size:21px;font-weight:700;letter-spacing:-.035em}
+.season-kicker{display:flex;align-items:center;gap:9px;margin:8px 0 0;color:#ffdf80;font-size:9px;font-weight:800;letter-spacing:.17em}
+.season-kicker span{font-size:12px;color:#fff2c1;text-shadow:0 0 10px #ffe38f}
+.brand-line{margin:7px 0 0;color:#fff7eb;font-size:13px;letter-spacing:.01em}
+.brand-area{margin:5px 0 0;color:#f0c8c4;font-size:11px}
+.links-actions{display:flex;flex-direction:column;gap:11px;width:100%}
+.link-button{min-height:72px;position:relative;display:flex;align-items:center;gap:14px;padding:12px 15px;border:1px solid #ffffff80;border-radius:16px;text-decoration:none;text-align:left;background:linear-gradient(135deg,#fffaf0,#ffeac9);color:#4e1119;box-shadow:0 7px 18px #4a001c36;transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}
+.link-button:hover{transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 12px 25px #4a001c58}
+.link-referral{background:linear-gradient(135deg,#21844b,#116237);border-color:#9de5a5;color:#fffdf4}
+.link-call{background:linear-gradient(135deg,#ff263d,#e00026);border-color:#ffe18c;color:#fff;animation:call-bright 3s ease-in-out infinite}
+.button-icon{width:42px;height:42px;flex:none;display:grid;place-items:center;border:1px solid currentColor;border-radius:13px;background:#ffffff1e;color:currentColor}
+.link-quote .button-icon{color:#b31d2b;background:#f4cfc4}
+.link-referral .button-icon{color:#ffe27a;background:#ffffff1e}
+.link-call .button-icon{color:#fff6db;background:#ffffff1e}
 .link-button svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .button-copy{min-width:0;display:flex;flex:1;flex-direction:column;gap:4px}
-.button-copy strong{font-family:Manrope,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:-.02em}
-.button-copy small{color:#d1ccca;font-size:11px;line-height:1.4}
-.link-quote .button-copy small{color:#fff0ee}
-.button-arrow{flex:none;color:#f2a19b;font-size:20px;transition:transform .2s ease}
-.link-quote .button-arrow{color:#fff}
+.button-copy strong{font-family:Manrope,Arial,sans-serif;font-size:16px;font-weight:800;letter-spacing:-.02em}
+.button-copy small{color:#68444a;font-size:10px;line-height:1.4}
+.link-referral .button-copy small,.link-call .button-copy small{color:#fff4e4}
+.button-arrow{flex:none;color:#ae1e2a;font-size:20px;transition:transform .2s ease}
+.link-referral .button-arrow,.link-call .button-arrow{color:#fff4d4}
 .link-button:hover .button-arrow{transform:translate(2px,-2px)}
-.services-link{align-self:center;margin-top:20px;color:#e4dfdc;text-decoration:none;font-size:12px;font-weight:600;transition:color .18s ease}
-.services-link span,.links-socials a span{margin-left:3px;color:#dc6969;transition:margin .18s ease}
+.services-link{align-self:center;margin-top:18px;color:#fff5e8;text-decoration:none;font-size:11px;font-weight:700;transition:color .18s ease}
+.services-link span,.links-socials a span{margin-left:3px;color:#ffdc7b;transition:margin .18s ease}
 .services-link:hover,.links-socials a:hover{color:#fff}
 .services-link:hover span,.links-socials a:hover span{margin-left:6px}
-.links-socials{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:26px;color:#c6c0bd;font-size:11px}
+.links-socials{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:21px;color:#ffe8dd;font-size:10px}
 .links-socials a{text-decoration:none;transition:color .18s ease}
-.links-socials i{width:3px;height:3px;border-radius:50%;background:#726b69}
-.links-footer{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:34px;color:#8f8987;font-size:10px}
-.links-footer a{color:#b2acab;text-decoration:none}
+.links-socials i{width:4px;height:4px;border-radius:50%;background:#ffd46b}
+.links-footer{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:24px;padding-top:14px;border-top:1px solid #ffffff36;color:#edc7c2;font-size:9px}
+.links-footer a{color:#fff1da;text-decoration:none}
 .links-footer a:hover{color:#fff}
 @keyframes page-in{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:520px){body.outline-links-page{padding:34px 20px 24px}.links-main{width:min(100%,410px)}.brand{margin-bottom:25px}.wordmark span{font-size:20px}.brand-name{margin-top:19px;font-size:21px}.link-button{min-height:72px;padding:12px 14px;border-radius:15px}.button-icon{width:41px;height:41px}.button-copy strong{font-size:15px}.button-copy small{font-size:10px}.links-footer{margin-top:29px}}
-@media(max-width:350px){body.outline-links-page{padding-inline:15px}.link-button{gap:11px;padding-inline:11px}.button-copy small{font-size:9px}}
+@keyframes bulb-glow{from{filter:brightness(.84);opacity:.82}to{filter:brightness(1.22);opacity:1}}
+@keyframes snow-drift{from{transform:translateY(-2%)}to{transform:translateY(14%)}}
+@keyframes call-bright{0%,100%{box-shadow:0 7px 18px #4a001c36}50%{box-shadow:0 8px 25px #ffb62e70,0 0 0 3px #ffedaa55}}
+@media(max-width:700px){body.outline-links-page{align-items:center;padding:76px 17px 25px}.holiday-scene:before{background-image:linear-gradient(180deg,rgba(83,4,21,.28),rgba(42,3,15,.71)),url('assets/holiday/photo-003.webp');background-position:53% center}.holiday-photo{width:190px;height:250px;opacity:.28;border-width:3px}.holiday-photo-left{left:-112px;top:18%;transform:rotate(-12deg)}.holiday-photo-right{right:-118px;bottom:12%;transform:rotate(9deg)}.holiday-lights{height:68px}.links-main{width:min(100%,430px);padding:23px 19px 18px;border-radius:23px}.brand{margin-bottom:20px}.wordmark span{font-size:20px}.brand-name{margin-top:13px;font-size:19px}.season-kicker{font-size:8px}.brand-line{font-size:12px}.link-button{min-height:68px;padding:11px 12px;border-radius:15px}.button-icon{width:39px;height:39px}.button-copy strong{font-size:15px}.button-copy small{font-size:9px}.services-link{margin-top:16px}.links-socials{margin-top:18px}.links-footer{margin-top:20px}}
+@media(max-width:360px){body.outline-links-page{padding-inline:12px}.links-main{padding:20px 14px 16px}.link-button{gap:10px;padding-inline:10px}.button-copy small{font-size:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.link-button:hover{transform:none}}
