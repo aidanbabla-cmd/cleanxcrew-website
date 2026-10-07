@@ -16,7 +16,7 @@ a:focus-visible{outline:3px solid #f1a16a;outline-offset:4px;border-radius:8px}
 .header-call:hover{color:#ffb67e}
 .call-dot,.links-eyebrow>span{width:7px;height:7px;display:inline-block;background:var(--accent);border-radius:50%;box-shadow:0 0 0 4px #e28a4e25}
 .links-main{width:min(100% - 64px,1240px);margin:0 auto;flex:1;display:flex;flex-direction:column;justify-content:center;padding:54px 0 34px}
-.links-intro{max-width:710px;animation:rise-in .7s .16s both}
+.links-intro{max-width:850px;animation:rise-in .7s .16s both}
 .links-eyebrow{display:flex;align-items:center;gap:11px;margin:0 0 23px;color:#e3e0d8;font-size:10px;font-weight:700;letter-spacing:.19em}
 .links-eyebrow>span{width:6px;height:6px;box-shadow:none}
 .links-intro h1{margin:0;font-family:Manrope,Arial,sans-serif;font-size:clamp(44px,6.15vw,78px);font-weight:600;line-height:1.015;letter-spacing:-.065em;text-wrap:balance}
@@ -54,7 +54,7 @@ a:focus-visible{outline:3px solid #f1a16a;outline-offset:4px;border-radius:8px}
 @keyframes backdrop-arrive{from{opacity:.65;transform:scale(1.06)}to{opacity:1;transform:scale(1.025)}}
 @keyframes call-glow{0%,100%{box-shadow:0 10px 30px #e28a4e28}50%{box-shadow:0 12px 37px #e28a4e48}}
 @keyframes button-sheen{0%,76%,100%{left:-32%}88%{left:130%}}
-@media(min-width:1000px){.links-main{padding-top:72px;padding-bottom:55px}.links-intro h1{font-size:clamp(62px,6.2vw,84px)}}
+@media(min-width:1000px){.links-main{padding-top:58px;padding-bottom:38px}.links-intro h1{font-size:clamp(62px,5.35vw,76px)}}
 @media(max-width:700px){.links-backdrop{background-image:linear-gradient(180deg,rgba(13,16,14,.61) 0%,rgba(13,16,14,.8) 31%,#101210 87%),url('assets/outline-cleaning-hero.jpg');background-position:59% top;background-size:auto 56svh;background-repeat:no-repeat;background-color:#101210}.links-header,.links-main,.links-footer{width:calc(100% - 38px)}.links-header{min-height:72px}.wordmark span{font-size:18px}.header-call{font-size:11px}.links-main{justify-content:flex-start;padding:70px 0 34px}.links-eyebrow{font-size:9px;margin-bottom:19px}.links-intro h1{font-size:clamp(42px,11vw,62px)}.links-lead{font-size:14px;margin-top:15px;line-height:1.58}.links-actions{grid-template-columns:1fr;gap:10px;margin-top:26px}.action-card{min-height:112px;padding:18px 16px;border-radius:15px;gap:13px}.action-icon{width:40px;height:40px;border-radius:12px}.action-copy>small{font-size:7px;margin-bottom:6px}.action-copy>strong{font-size:19px}.action-copy>span{font-size:10px;margin-top:5px}.action-arrow{font-size:17px}.call-action{min-width:0;width:100%;min-height:64px;margin-top:16px;padding:11px 15px}.services-link{margin-top:19px}.links-socials{margin-top:26px}.links-footer{min-height:56px;font-size:9px}}
 @media(max-width:370px){.links-header,.links-main,.links-footer{width:calc(100% - 30px)}.links-main{padding-top:55px}.action-card{gap:10px;padding-inline:13px}.action-copy>strong{font-size:17px}.action-copy>span{font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.action-card:hover,.call-action:hover{transform:none}}
