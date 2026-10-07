@@ -3,6 +3,6 @@
     { "source": "/r/:path*", "destination": "/referrals.html", "permanent": true },
     { "source": "/handoff/:path*", "destination": "/referrals.html", "permanent": true },
     { "source": "/participant", "destination": "/referrals.html", "permanent": true },
-    { "source": "/quote", "destination": "/#contact", "permanent": false }
+    { "source": "/quote", "destination": "/quote.html", "permanent": false }
   ]
 }
