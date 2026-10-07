@@ -1,4 +1,7 @@
 {
+  "rewrites": [
+    { "source": "/qr", "destination": "/links.html" }
+  ],
   "redirects": [
     { "source": "/r/:path*", "destination": "/referrals.html", "permanent": true },
     { "source": "/handoff/:path*", "destination": "/referrals.html", "permanent": true },
