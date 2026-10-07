@@ -1,63 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
-:root{color-scheme:dark;--ink:#fffaf3;--muted:#f4dad8;--red:#ed263b;--red-dark:#ad1027;--green:#17673d;--gold:#ffd46b}
+:root{color-scheme:dark;--ink:#fffaf5;--muted:#e3d4d0;--red:#9d2635;--red-deep:#59121e;--gold:#c7a871;--cream:#f7f3ed}
 *{box-sizing:border-box}
-html{min-height:100%;background:#21040b;scroll-behavior:smooth}
-body.outline-links-page{min-height:100svh;margin:0;position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;padding:76px 22px 30px;color:var(--ink);font-family:'DM Sans',Arial,sans-serif;background:#21040b;overflow-x:hidden}
+html{min-height:100%;background:#210b10;scroll-behavior:smooth}
+body.outline-links-page{min-height:100svh;margin:0;position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;padding:32px 20px;color:var(--ink);font-family:'DM Sans',Arial,sans-serif;background:#210b10;overflow-x:hidden}
 a{color:inherit;-webkit-tap-highlight-color:transparent}
-a:focus-visible{outline:3px solid #ffe08d;outline-offset:4px}
-.holiday-scene{position:fixed;z-index:-2;inset:0;overflow:hidden;background:#1c0710}
-.holiday-scene:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,3,14,.08) 0%,rgba(53,3,17,.3) 46%,rgba(31,3,10,.64) 100%),url('assets/holiday/photo-003.webp') center 48%/cover no-repeat;transform:scale(1.025)}
-.holiday-scene:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 38%,transparent 0,rgba(57,0,13,.08) 60%,rgba(30,0,8,.32) 100%)}
-.holiday-photo{position:absolute;z-index:1;width:clamp(205px,23vw,330px);height:clamp(270px,39vh,390px);object-fit:cover;border:5px solid #ffe49b;border-radius:20px;box-shadow:0 18px 70px #1700089c,0 0 24px #ffcc6b42;opacity:.88}
-.holiday-photo-left{left:max(2.5vw,18px);top:20%;transform:rotate(-7deg)}
-.holiday-photo-right{right:max(2.5vw,18px);bottom:14%;transform:rotate(6deg)}
-.snowfall{position:absolute;z-index:2;inset:-20% 0;background-image:radial-gradient(circle,#fff 0 1.2px,transparent 1.7px),radial-gradient(circle,#ffe7b5 0 1px,transparent 1.6px),radial-gradient(circle,#fff 0 .8px,transparent 1.4px);background-size:137px 149px,193px 207px,83px 97px;background-position:0 0,53px 71px,31px 27px;opacity:.42;animation:snow-drift 24s linear infinite}
-.holiday-lights{position:fixed;z-index:3;top:0;left:0;width:100%;height:92px;overflow:visible;pointer-events:none}
-.light-wire{fill:none;stroke:#254b2b;stroke-width:6;stroke-linecap:round}
-.bulb{stroke:#fff3c3;stroke-width:2.5;animation:bulb-glow 2.4s ease-in-out infinite alternate}
-.bulb-red{fill:#ff263d}.bulb-gold{fill:#ffd84f;animation-delay:.4s}.bulb-green{fill:#21da78;animation-delay:.8s}.bulb-blue{fill:#33c9ff;animation-delay:1.2s}
-.links-main{position:relative;z-index:2;width:min(100%,470px);margin:auto;display:flex;flex-direction:column;align-items:stretch;text-align:center;padding:25px 25px 20px;border:2px solid #ffd56d;border-radius:27px;background:linear-gradient(155deg,rgba(239,35,56,.97),rgba(192,13,43,.97) 62%,rgba(151,10,35,.98));box-shadow:0 20px 80px #190008a6,0 0 50px #ff263d70;animation:page-in .55s cubic-bezier(.2,.7,.2,1) both}
-.brand{display:flex;flex-direction:column;align-items:center;margin:0 0 23px}
+a:focus-visible{outline:3px solid #e7d1a2;outline-offset:4px;border-radius:8px}
+.holiday-scene{position:fixed;z-index:-2;inset:0;overflow:hidden;background:#210b10}
+.holiday-scene:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(49,7,16,.78),rgba(104,18,31,.62) 48%,rgba(28,7,13,.8)),linear-gradient(0deg,rgba(19,6,10,.46),transparent 58%),url('assets/holiday/photo-003.webp') center 48%/cover no-repeat;transform:scale(1.02)}
+.holiday-scene:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,transparent 0,rgba(22,5,10,.1) 55%,rgba(15,4,8,.34) 100%)}
+.links-main{position:relative;z-index:1;width:min(100%,440px);margin:auto;display:flex;flex-direction:column;align-items:stretch;text-align:center;padding:34px 30px 24px;border:1px solid #ffffff38;border-radius:24px;background:linear-gradient(155deg,rgba(76,17,28,.93),rgba(45,12,19,.94));box-shadow:0 24px 70px #16030880;backdrop-filter:blur(5px);animation:page-in .45s ease-out both}
+.brand{display:flex;flex-direction:column;align-items:center;margin:0 0 25px}
 .wordmark{display:inline-flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;font-family:Manrope,Arial,sans-serif;line-height:1}
-.wordmark span{font-size:21px;font-weight:800;letter-spacing:.15em;text-shadow:0 2px 20px #ff8791a3}
-.wordmark small{font-size:8px;font-weight:700;letter-spacing:.36em;color:#ffe1c9}
-.brand-name{margin:16px 0 0;font-family:Manrope,Arial,sans-serif;font-size:21px;font-weight:700;letter-spacing:-.035em}
-.season-kicker{display:flex;align-items:center;gap:9px;margin:8px 0 0;color:#ffdf80;font-size:9px;font-weight:800;letter-spacing:.17em}
-.season-kicker span{font-size:12px;color:#fff2c1;text-shadow:0 0 10px #ffe38f}
-.brand-line{margin:7px 0 0;color:#fff7eb;font-size:13px;letter-spacing:.01em}
-.brand-area{margin:5px 0 0;color:#f0c8c4;font-size:11px}
-.links-actions{display:flex;flex-direction:column;gap:11px;width:100%}
-.link-button{min-height:72px;position:relative;display:flex;align-items:center;gap:14px;padding:12px 15px;border:1px solid #ffffff80;border-radius:16px;text-decoration:none;text-align:left;background:linear-gradient(135deg,#fffaf0,#ffeac9);color:#4e1119;box-shadow:0 7px 18px #4a001c36;transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}
-.link-button:hover{transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 12px 25px #4a001c58}
-.link-referral{background:linear-gradient(135deg,#21844b,#116237);border-color:#9de5a5;color:#fffdf4}
-.link-call{background:linear-gradient(135deg,#ff263d,#e00026);border-color:#ffe18c;color:#fff;animation:call-bright 3s ease-in-out infinite}
-.button-icon{width:42px;height:42px;flex:none;display:grid;place-items:center;border:1px solid currentColor;border-radius:13px;background:#ffffff1e;color:currentColor}
-.link-quote .button-icon{color:#b31d2b;background:#f4cfc4}
-.link-referral .button-icon{color:#ffe27a;background:#ffffff1e}
-.link-call .button-icon{color:#fff6db;background:#ffffff1e}
-.link-button svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.wordmark span{font-size:21px;font-weight:800;letter-spacing:.15em}
+.wordmark small{font-size:8px;font-weight:700;letter-spacing:.36em;color:#e7d8d1}
+.brand-name{margin:17px 0 0;font-family:Manrope,Arial,sans-serif;font-size:21px;font-weight:700;letter-spacing:-.035em}
+.season-kicker{display:flex;align-items:center;gap:9px;margin:10px 0 0;color:#d8c29c;font-size:9px;font-weight:700;letter-spacing:.15em}
+.season-kicker span{font-size:11px;color:#e0c486}
+.brand-line{margin:8px 0 0;color:#f5ebe4;font-size:13px}
+.brand-area{margin:5px 0 0;color:#d3bfba;font-size:11px}
+.links-actions{display:flex;flex-direction:column;gap:10px;width:100%}
+.link-button{min-height:68px;display:flex;align-items:center;gap:14px;padding:11px 14px;border:1px solid #ffffff9c;border-radius:13px;text-decoration:none;text-align:left;background:var(--cream);color:#32161a;box-shadow:0 4px 14px #1603082e;transition:transform .18s ease,background .18s ease,border-color .18s ease}
+.link-button:hover{transform:translateY(-2px);background:#fff;border-color:#fff}
+.link-referral{background:#eee9e1;border-color:#e5ddd2;color:#32161a}
+.link-call{background:#862331;border-color:#c8987e;color:#fffaf5}
+.button-icon{width:40px;height:40px;flex:none;display:grid;place-items:center;border:1px solid #b9a6a0;border-radius:11px;background:#fff;color:#872431}
+.link-referral .button-icon{border-color:#c5b7a9;background:#f7f3ed;color:#725c4d}
+.link-call .button-icon{border-color:#cba78c;background:#ffffff10;color:#f2dfc8}
+.link-button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .button-copy{min-width:0;display:flex;flex:1;flex-direction:column;gap:4px}
-.button-copy strong{font-family:Manrope,Arial,sans-serif;font-size:16px;font-weight:800;letter-spacing:-.02em}
-.button-copy small{color:#68444a;font-size:10px;line-height:1.4}
-.link-referral .button-copy small,.link-call .button-copy small{color:#fff4e4}
-.button-arrow{flex:none;color:#ae1e2a;font-size:20px;transition:transform .2s ease}
-.link-referral .button-arrow,.link-call .button-arrow{color:#fff4d4}
+.button-copy strong{font-family:Manrope,Arial,sans-serif;font-size:15px;font-weight:700;letter-spacing:-.015em}
+.button-copy small{color:#6d5957;font-size:10px;line-height:1.4}
+.link-call .button-copy small{color:#f0ddda}
+.button-arrow{flex:none;color:#8a2733;font-size:19px;transition:transform .18s ease}
+.link-call .button-arrow{color:#f0d8ba}
 .link-button:hover .button-arrow{transform:translate(2px,-2px)}
-.services-link{align-self:center;margin-top:18px;color:#fff5e8;text-decoration:none;font-size:11px;font-weight:700;transition:color .18s ease}
-.services-link span,.links-socials a span{margin-left:3px;color:#ffdc7b;transition:margin .18s ease}
+.services-link{align-self:center;margin-top:18px;color:#f4eae4;text-decoration:none;font-size:11px;font-weight:600;transition:color .18s ease}
+.services-link span,.links-socials a span{margin-left:3px;color:#d6bd91;transition:margin .18s ease}
 .services-link:hover,.links-socials a:hover{color:#fff}
 .services-link:hover span,.links-socials a:hover span{margin-left:6px}
-.links-socials{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:21px;color:#ffe8dd;font-size:10px}
+.links-socials{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:20px;color:#e8d9d4;font-size:10px}
 .links-socials a{text-decoration:none;transition:color .18s ease}
-.links-socials i{width:4px;height:4px;border-radius:50%;background:#ffd46b}
-.links-footer{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:24px;padding-top:14px;border-top:1px solid #ffffff36;color:#edc7c2;font-size:9px}
-.links-footer a{color:#fff1da;text-decoration:none}
+.links-socials i{width:3px;height:3px;border-radius:50%;background:#c7a871}
+.links-footer{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:23px;padding-top:14px;border-top:1px solid #ffffff2c;color:#cdbbb6;font-size:9px}
+.links-footer a{color:#eee1dc;text-decoration:none}
 .links-footer a:hover{color:#fff}
-@keyframes page-in{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
-@keyframes bulb-glow{from{filter:brightness(.84);opacity:.82}to{filter:brightness(1.22);opacity:1}}
-@keyframes snow-drift{from{transform:translateY(-2%)}to{transform:translateY(14%)}}
-@keyframes call-bright{0%,100%{box-shadow:0 7px 18px #4a001c36}50%{box-shadow:0 8px 25px #ffb62e70,0 0 0 3px #ffedaa55}}
-@media(max-width:700px){body.outline-links-page{align-items:center;padding:76px 17px 25px}.holiday-scene:before{background-image:linear-gradient(180deg,rgba(83,4,21,.28),rgba(42,3,15,.71)),url('assets/holiday/photo-003.webp');background-position:53% center}.holiday-photo{width:190px;height:250px;opacity:.28;border-width:3px}.holiday-photo-left{left:-112px;top:18%;transform:rotate(-12deg)}.holiday-photo-right{right:-118px;bottom:12%;transform:rotate(9deg)}.holiday-lights{height:68px}.links-main{width:min(100%,430px);padding:23px 19px 18px;border-radius:23px}.brand{margin-bottom:20px}.wordmark span{font-size:20px}.brand-name{margin-top:13px;font-size:19px}.season-kicker{font-size:8px}.brand-line{font-size:12px}.link-button{min-height:68px;padding:11px 12px;border-radius:15px}.button-icon{width:39px;height:39px}.button-copy strong{font-size:15px}.button-copy small{font-size:9px}.services-link{margin-top:16px}.links-socials{margin-top:18px}.links-footer{margin-top:20px}}
-@media(max-width:360px){body.outline-links-page{padding-inline:12px}.links-main{padding:20px 14px 16px}.link-button{gap:10px;padding-inline:10px}.button-copy small{font-size:8px}}
+@keyframes page-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){body.outline-links-page{padding:20px 15px}.holiday-scene:before{background-image:linear-gradient(145deg,rgba(49,7,16,.78),rgba(104,18,31,.64) 48%,rgba(28,7,13,.82)),linear-gradient(0deg,rgba(19,6,10,.46),transparent 58%),url('assets/holiday/photo-003.webp');background-position:56% center}.links-main{width:min(100%,420px);padding:29px 20px 21px;border-radius:21px}.brand{margin-bottom:21px}.wordmark span{font-size:20px}.brand-name{margin-top:14px;font-size:19px}.season-kicker{font-size:8px}.brand-line{font-size:12px}.link-button{min-height:65px;padding:10px 12px;border-radius:12px}.button-icon{width:38px;height:38px}.button-copy strong{font-size:14px}.button-copy small{font-size:9px}.services-link{margin-top:16px}.links-socials{margin-top:18px}.links-footer{margin-top:20px}}
+@media(max-width:360px){.links-main{padding:24px 15px 18px}.link-button{gap:10px;padding-inline:10px}.button-copy small{font-size:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.link-button:hover{transform:none}}
