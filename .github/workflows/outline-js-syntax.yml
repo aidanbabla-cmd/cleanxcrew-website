@@ -1,0 +1,28 @@
+name: Outline JS syntax
+on:
+  pull_request:
+    paths:
+      - 'CleanXCrew Website/**'
+      - '.github/workflows/outline-js-syntax.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'CleanXCrew Website/**'
+      - '.github/workflows/outline-js-syntax.yml'
+jobs:
+  javascript-syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Parse-check all site JavaScript files
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' file; do
+            echo "Checking $file"
+            node --check "$file"
+          done < <(find "CleanXCrew Website" -maxdepth 1 -type f -name '*.js' -print0)
